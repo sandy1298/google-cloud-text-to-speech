@@ -1,0 +1,28 @@
+{
+  "name": "phrase",
+  "version": "1.0.0",
+  "description": "Create a custom phrasebook for language learning.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "Google Text-to-speech"
+  ],
+  "author": "Clotia Johari",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^2.1.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

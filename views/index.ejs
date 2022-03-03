@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Phrasebook File Creator</title>
+
+  <style>
+    body {
+      background: rgb(8, 8, 8);
+    }
+
+    #image {
+      border-radius: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      
+    }
+
+    #image:hover {
+     -webkit-transform: scaleX(-1);
+     transform: scaleX(-1);
+}
+    div {
+      color: white;
+      border: groove;
+      font-family: "Great Vibes", cursive;
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+    h1 {
+      color: #b48608;
+      font-family: "Great Vibes", cursive;
+      font-size: 45px;
+      line-height: 40px;
+      font-weight: normal;
+      margin-bottom: 30px;
+      margin-top: 50px;
+      text-align: center;
+      text-shadow: 0 1px 1px #fff;
+    }
+
+    .texts {
+      font-family: "Great Vibes", cursive;
+    }
+
+    #lang-text {
+      margin-left: 20px;
+      text-align: center;
+    }
+    .button {
+      background-color: rgb(104, 104, 119);
+      color: white;
+      padding: 10px 20px;
+      border: 2px solid rgb(128, 148, 129), 150, 150;
+      border-radius: 6px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      width: 140px;
+      height: 50px;
+      font-family: "Great Vibes", cursive;
+      text-align: center;
+      margin: 10px;
+      margin-left: 20px;
+    }
+    #text-input {
+     width: 75%;
+     height: 35%;
+     margin-top: 5px;
+     margin-bottom: 20px;
+     margin-left: 20px;
+     margin-right:20px;
+}
+   
+    #fn-text{
+     text-align: center;
+     margin-left: 20px;
+}
+    .text-label {
+      color: #b48608;
+      font-family: "Great Vibes", cursive;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .button:hover {
+      background-color: rgb(167, 164, 164);
+      /* Green */
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    p {
+      color: #b48608;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0 0 14px;
+      margin-left: 20px;
+      font-family: "Great Vibes", cursive;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Create & Compile Your Own Audio PhraseBook Files <br> w/ Text to Speech</h1>
+  <form method="post" action="/">
+    <label for="form-text" class="text-label" >Compose Text to Convert</label> <br>
+    <textarea name="text" class="texts" id="text-input" cols="30" rows="10" placeholder="Hello. How are you? I'm not from here."
+      required></textarea> <br>
+      <p>Language Character Key: </p>
+      <div>
+        'kn' : 'Kannada'
+        'af' : 'Afrikaans'
+        'sq' : 'Albanian'
+        'ar' : 'Arabic'
+        'hy' : 'Armenian'
+        'ca' : 'Catalan'
+        'zh' : 'Chinese',
+        'zh-cn' : 'Chinese (Mandarin/China)'
+        'zh-tw' : 'Chinese (Mandarin/Taiwan)'
+        'zh-yue' : 'Chinese (Cantonese)'
+        'hr' : 'Croatian'
+        'cs' : 'Czech'
+        'da' : 'Danish'
+        'nl' : 'Dutch'
+        'en' : 'English'
+        'en-Au' : 'English (Australia)'
+        'en-Uk' : 'English (United Kingdom)'
+        'en-Us' : 'English (United States)'
+        'eo' : 'Esperanto'
+        'fi' : 'Finnish'
+        'fr' : 'French'
+        'de' : 'German'
+        'el' : 'Greek'
+        'ht' : 'Haitian Creole'
+        'hi' : 'Hindi'
+        'hu' : 'Hungarian'
+        'is' : 'Icelandic'
+        'id' : 'Indonesian'
+        'it' : 'Italian'
+        'ja' : 'Japanese'
+        'ko' : 'Korean'
+        'la' : 'Latin'
+        'lv' : 'Latvian'
+        'mk' : 'Macedonian'
+        'no' : 'Norwegian'
+        'pl' : 'Polish'
+        'pt' : 'Portuguese'
+        'pt-br' : 'Portuguese (Brazil)'
+        'ro' : 'Romanian'
+        'ru' : 'Russian'
+        'sr' : 'Serbian'
+        'sk' : 'Slovak'
+        'es' : 'Spanish'
+        'es-es' : 'Spanish (Spain)'
+        'es-us' : 'Spanish (United States)'
+        'sw' : 'Swahili'
+        'sv' : 'Swedish'
+        'ta' : 'Tamil'
+        'th' : 'Thai'
+        'tr' : 'Turkish'
+        'vi' : 'Vietnamese'
+        'cy' : 'Welsh
+      Insert the correct characters below: For Turkish, you'd input: tr (no quotations)
+    
+    </div> <br>
+
+    <label for="lang" class="text-label" id="lang">Language </label> <br>
+    <input type="text" class="texts" id="lang-text" placeholder="Enter 2-5 letter language code; English is 'en' " name="lang" required> 
+    <br>
+    <label for="filename" class="text-label">Filename: </label> <br>
+    <input type="text" class="texts" id="fn-text" placeholder="'Hello' creates Hello.mp3'" name="filename"><p> *No need to add extension to filename, '.mp3' will be added automatically.</p> <br>
+    <input type="submit" class="button" value="Create MP3 File" />
+    <br>
+    <button class="button" type="reset">Reset (Clear Field)</button>
+  </form>
+
+  <a href="https://ibb.co/ZdQdd2D"><img src="https://i.ibb.co/6YKYYXC/langmap.png" alt="langmap" id="image"
+    border="0"></a>
+   
+</body>
+
+
+</html>
